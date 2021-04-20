@@ -1,0 +1,2361 @@
+@import './mixin.less';
+@import './zxq.less';
+
+#app {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide-right-enter-active,
+.slide-right-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active {
+    will-change: transform;
+    transition: all 500ms;
+    position: absolute;
+}
+
+.top-tiplogin {
+    position: absolute;
+    top: 0;
+    background-color: #f3d3a5;
+    width: 100%;
+    text-align: center;
+    color: #4CCC82;
+    padding: 0.03rem 0;
+}
+
+.bottom-menus {
+    position: absolute;
+    background-color: #eee;
+    width: 100%;
+    height: 1.2rem;
+    z-index: 1;
+    bottom: 0;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+
+    .tip {
+        position: absolute;
+        top: -35px;
+
+        a {
+            color: #4CCC82;
+        }
+    }
+
+    img {
+        width: 0.6rem;
+        height: 0.6rem;
+        filter: grayscale(100%);
+    }
+
+    .active {
+        filter: grayscale(0%);
+    }
+
+}
+
+.slide-right-enter {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+}
+
+.slide-right-leave-active {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+}
+
+.slide-left-enter {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+}
+
+.slide-left-leave-active {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+}
+
+.unit-bg {
+    background: url('https://cdn-1256130579.cos.ap-shanghai.myqcloud.com/images/index-bg.png') center top no-repeat;
+    background-size: contain;
+    // position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.home-loading {
+    width: 100%;
+    height: 100%;
+}
+
+.page-integral-history {
+    padding-top: 10px;
+    height: 100%;
+    background: url(https://cdn-1256130579.cos.ap-shanghai.myqcloud.com/images/20190316/car_bg_logo1@2x.png) center bottom no-repeat / contain;
+
+    .con {
+        padding-top: 0.3rem;
+        padding-bottom: 2rem;
+    }
+
+    .history {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .bottom-menus {
+            flex: 1;
+        }
+    }
+
+    .more {
+        margin-top: 0.1rem;
+        padding-top: 0.1rem;
+        border-top: dashed 1px #ccc;
+    }
+
+    .ticketcon {
+        margin-right: 0.3rem;
+    }
+
+    .money {
+        position: absolute;
+        top: 0;
+        right: 0.3rem;
+        font-size: 0.6rem;
+    }
+}
+
+.page-buylist {
+    height: 100%;
+
+    .buy-from {
+        text-align: left;
+
+        .weui-input {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        .weui-btn {
+            height: 0.8rem;
+            line-height: 0.8rem;
+            font-size: 0.4rem;
+            margin-top: 0.3rem;
+        }
+
+        .tatalMoney {
+            .weui-cell__ft {
+                font-size: 0.35rem;
+                font-weight: 600;
+                color: #000;
+            }
+
+        }
+    }
+}
+
+.page-send {
+    .pad {
+        padding-bottom: 0;
+    }
+}
+
+.page-now {
+    position: relative;
+    min-height: 90%;
+
+    .content {
+        padding-top: 0.6rem;
+        margin-top: 0.6rem;
+        transform: none;
+        // left: 5%;
+        border-top: 1px #ddd solid;
+
+        .card {
+            padding: 0.3rem;
+        }
+    }
+
+    .button-box {
+        margin-top: 0.6rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .button-box .button {
+        height: 0.8rem;
+        width: 47%;
+        margin: 0;
+        left: 0;
+        transform: none;
+        line-height: 0.8rem;
+    }
+
+    .status-box {
+        font-size: 0.32rem;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        border-bottom: solid 1px #eee;
+    }
+
+    .station-box {
+        font-size: 0.28rem;
+        color: #999;
+        margin-bottom: 0.3rem;
+    }
+
+    .station-box img {
+        height: 0.3rem;
+        width: 0.3rem;
+        margin-top: 0.07rem;
+        margin-right: 0.1rem;
+    }
+
+    .card {
+        margin-bottom: 0.6rem;
+    }
+
+    .tip-box {
+        font-size: 0.22rem;
+        text-align: center;
+        margin-top: 0.2rem;
+    }
+
+    .tip-box span {
+        color: blue;
+    }
+
+    .temp-applymonth {
+        .car-box {
+            min-height: 2rem;
+            width: 100%;
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: dotted 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .plate-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .car-box .plate {
+            flex: 1;
+            font-weight: 600;
+        }
+
+        .car-box img {
+            height: 1rem;
+            width: 2.4rem;
+        }
+
+        .monthstatus {
+            font-size: 0.28rem;
+            font-weight: 600;
+            width: 100%;
+            margin-top: 0.3rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .waiting {
+            color: #e6a23c;
+        }
+
+        .refuse {
+            color: #f56c6c;
+        }
+
+        .applybutton {
+            margin-top: 0.3rem;
+        }
+    }
+}
+
+.page-home {
+
+    &.page-coupon,
+    &.page-historylist {
+        .tab-content {
+            padding-top: 0.3rem;
+            padding-bottom: 0;
+            background: url(https://cdn-1256130579.cos.ap-shanghai.myqcloud.com/images/20190316/car_bg_logo1@2x.png) center bottom no-repeat/contain;
+        }
+    }
+
+    .tip {
+        margin: 0.2rem 0;
+        color: #4BCC83;
+    }
+}
+
+.page-buyResult {
+    .status-icon {
+        position: absolute;
+        top: 8%;
+        left: 50%;
+        transform: translateX(45px);
+    }
+
+    .status-text {
+        color: #06ba84;
+        font-weight: 600;
+        margin-top: 0.1rem;
+    }
+
+    .addfrom {
+        margin-top: 0.3rem;
+        padding-top: 0.3rem;
+
+        .weui-cell {
+            padding: 0.15rem;
+        }
+
+        .pad {
+            padding-top: 0;
+        }
+
+        .pay-status {
+            font-weight: 600;
+            color: #fff;
+            font-size: 0.24rem;
+            width: 0.8rem;
+            line-height: 1.3;
+            background-color: #06ba84;
+            border-radius: 0.4rem;
+            position: absolute;
+            padding: 0.1rem;
+            top: 0.7rem;
+            right: 0.3rem;
+        }
+
+        .fail {
+            color: #fb8989;
+        }
+    }
+}
+
+.page-limitList {
+    height: 100%;
+
+    .con {
+        padding-top: 0;
+    }
+
+    .edit-button {
+        position: absolute;
+        bottom: 0;
+        right: 0.3rem;
+        background-color: #06ba84;
+        color: #fff;
+        padding: 0 0.1rem;
+        border-radius: 0.1rem;
+    }
+}
+
+.page-authorize {
+    position: relative;
+    height: 100%;
+
+    .touch {
+        height: 100%;
+    }
+
+    .seach-box {
+        margin-bottom: 0.3rem;
+        padding: 0.2rem;
+        margin-top: 0.3rem;
+    }
+}
+
+.page-autoList {
+    height: 100%;
+
+    .seach-box {
+        margin-bottom: 0.3rem;
+        padding: 0.2rem;
+    }
+}
+
+.page-auto {
+    .addplate {}
+}
+
+.page-historylist {
+    height: 100%;
+
+    .type-box {
+        position: fixed;
+        z-index: 99;
+        top: 44px;
+        right: 0.1rem;
+
+        span {
+            height: 0.8rem;
+            line-height: 0.24rem;
+            border-radius: 0.4rem;
+            display: block;
+            width: 0.8rem;
+            font-size: 0.20rem;
+            padding: 0.2rem;
+            padding-top: 0.16rem;
+            margin: 0.1rem 0;
+            color: #666;
+            box-shadow: 0 0 0.2rem #ddd;
+            background-color: #c3fbdc;
+        }
+
+        .spanActive {
+            background-color: #4BCC83;
+            color: #fff;
+        }
+    }
+
+}
+
+.page-lovecar {
+    position: relative;
+    min-height: 100%;
+    padding: 0.5rem 0;
+
+    .lock-box {
+        width: 100%;
+        font-size: 0.28rem;
+        color: #666;
+        padding: 0.3rem;
+        padding-bottom: 0;
+
+        .lock {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.28rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        span {
+            display: block;
+            width: 2rem;
+        }
+
+        .weui-cell:before {
+            display: none;
+        }
+    }
+
+    .card {
+        margin-bottom: 0.6rem;
+        padding: 0.3rem;
+    }
+
+    .action-box {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+
+    .action-box>div {
+        border-radius: 0.15rem;
+        height: 1.4rem;
+        width: 3.3rem;
+        border-collapse: separate;
+        border-spacing: 0.1rem 0.5rem;
+        border: dotted 1px #06ba84;
+        color: #06ba84;
+        font-size: 0.24rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .action-box img {
+        width: 0.4rem;
+        height: 0.4rem;
+    }
+
+    .apply-box {
+        position: relative;
+        height: 2.6rem;
+        padding: 0;
+        border-radius: 0.16rem;
+    }
+
+    .apply-box .t1 {
+        position: absolute;
+        color: #fff;
+        top: 0.3rem;
+        left: 0.3rem;
+        z-index: 2;
+        font-size: 0.36rem;
+        font-weight: 600;
+    }
+
+    .apply-box .t2 {
+        position: absolute;
+        color: #eee;
+        top: 0.8rem;
+        left: 0.3rem;
+        z-index: 2;
+        font-size: 0.28rem;
+    }
+
+    .apply-box .t3 {
+        position: absolute;
+        width: 1.57rem;
+        height: 0.5rem;
+        line-height: 0.5rem;
+        text-align: center;
+        border-radius: 0.25rem;
+        color: #fff;
+        border: solid 1px #0cda95;
+        background-color: #02ab4f;
+        bottom: 0.4rem;
+        right: 0.4rem;
+        z-index: 2;
+        font-size: 0.24rem;
+        font-weight: 600;
+    }
+
+    .apply-box img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .button-box {
+        width: 90%;
+        padding-top: 0.3rem;
+    }
+
+    .item-box {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.page-temp-pay {
+    width: 100%;
+    // height: 100%;
+    overflow: hidden;
+
+    .temp-pay-ad {
+        padding: 0.1rem 0.4rem 0;
+        height: 1.2rem;
+
+        img {
+            max-width: 100%;
+            height: 1.2rem;
+        }
+    }
+
+    .temp-card {
+        margin: 0.2rem 0.4rem 0.1rem;
+        padding-bottom: 0.2rem;
+        height: auto;
+
+        .temp-label {
+            padding: 0.7rem 0.32rem 0;
+            height: 0.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.28rem;
+            color: rgba(0, 0, 0, 0.4);
+
+            .temp-history-btn {
+                cursor: pointer;
+                display: flex;
+
+                .special-btn {
+                    width: 0.6rem;
+                    height: 0.6rem;
+                    text-align: center;
+                    line-height: 0.6rem;
+                    border: 1px dashed #ddd;
+                    color: red;
+                }
+
+                .history-btn {
+                    width: 0.6rem;
+                    height: 0.6rem;
+                    margin-left: 0.2rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        .temp-history {
+            min-height: 1.44rem;
+        }
+
+        .temp-plate {
+            margin: 0.64rem 0.32rem 0;
+
+            &-err {
+                width: 100%;
+                text-align: right;
+                font-size: 0.24rem;
+
+                &.red {
+                    color: #f00;
+                }
+
+                & .green {
+                    color: #02ab4f;
+                }
+            }
+        }
+
+        .temp-tips {
+            margin: 0.32rem 0.3rem 0;
+            border-top: 1px dashed #ddd;
+            text-align: center;
+
+            &>p {
+                font-size: 0.18rem;
+                color: rgba(0, 0, 0, 0.2);
+                line-height: 0.25rem;
+                padding: 0 0.5rem;
+                text-align: left;
+
+                &:nth-child(1) {
+                    margin-top: 0.24rem;
+                    margin-left: -0.1rem;
+                }
+            }
+        }
+
+        .temp-btn {
+            margin: 0.82rem 0.4rem 0;
+        }
+    }
+
+    .temp-pay-call {
+        width: 100%;
+        margin-top: -0.3rem;
+        position: absolute;
+        right: 0;
+        width: 2.7rem;
+        height: 2.5rem;
+        background: transparent;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .temp-pay-skip-btn {
+        margin: 0 5%;
+        padding: 0;
+        position: absolute;
+        bottom: 0.3rem;
+        width: 90%;
+        height: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.28rem;
+        color: #000;
+        font-weight: 600;
+        cursor: pointer;
+
+        img {
+            width: 0.6rem;
+            height: 0.6rem;
+        }
+    }
+}
+
+.page-temp-fee {
+    background-position: center -36%;
+    height: 100%;
+    overflow: hidden;
+
+    &.scroll {
+        overflow: auto;
+        padding-bottom: 0.2rem;
+    }
+
+    .cost-card {
+        margin: 0.16rem 0.4rem 0;
+        height: 2.38rem;
+        background: #fff url('https://cdn-1256130579.cos.ap-shanghai.myqcloud.com/images/home_tad_bg@2x.png') center center no-repeat;
+        padding: 0.3rem;
+
+        .cost-box-top {
+            display: flex;
+            align-items: center;
+            height: 1.23rem;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+
+            .cost-box-top-desc {
+                width: 3.7rem;
+                font-size: 0.42rem;
+                color: #303030;
+                font-weight: 600;
+
+                &>div {
+                    line-height: 1;
+
+                    &:nth-child(1) {
+                        height: 0.59rem;
+                        font-size: 0.42rem;
+                        font-weight: 600;
+                        color: #303030;
+                    }
+
+                    &:nth-child(2) {
+                        height: 0.4rem;
+                        font-size: 0.28rem;
+                        font-weight: 400;
+                        color: #666;
+                    }
+                }
+            }
+
+            .cost-box-top-image {
+                width: 2.4rem;
+                height: 1.03rem;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .cost-box-bottom {
+            margin-top: 0.2rem;
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 0.32rem;
+                height: 0.32rem;
+            }
+
+            &>div {
+                font-size: 0.24rem;
+                color: #666;
+                padding-left: 0.1rem;
+            }
+        }
+    }
+
+    .cost-form {
+        margin-top: 0.3rem;
+        padding: 0 0.4rem;
+
+        .weui-cell {
+            &.border {
+                margin: 0 0.4rem;
+                width: auto !important;
+                padding: 0.3rem 0 !important;
+                .border-1px(#ddd, bottom);
+
+                .weui-cell__ft {
+                    color: #303030;
+                    font-weight: 600;
+                }
+
+                &::before {
+                    border: 0;
+                }
+            }
+
+            &.no-border {
+                align-items: flex-start;
+                padding: 0.3rem 0.4rem !important;
+
+                .weui-cell__ft {
+                    color: #303030;
+                    font-weight: 600;
+                }
+
+                &::before {
+                    border: 0;
+                }
+            }
+        }
+
+
+    }
+
+    .cost-countdown {
+        padding: 0.2rem 0.4rem 0;
+        color: #f22222;
+        font-size: 0.24rem;
+        line-height: 0.3rem;
+        height: 0.6rem;
+    }
+
+    .cost-btn {
+        margin: 0.82rem 0.4rem 0;
+    }
+
+    .cost-tips {
+        margin-top: 0.32rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 0.28rem;
+        font-size: 0.2rem;
+
+        &>div {
+            &:nth-child(2) {
+                padding-left: 0.1rem;
+
+                a {
+                    text-decoration: underline;
+                    color: #5DB4ED;
+                }
+            }
+        }
+
+        img {
+            width: 0.24rem;
+            height: 0.24rem;
+        }
+    }
+
+    .cell-total {
+        font-size: 0.48rem;
+        text-align: right;
+    }
+
+    .cell-tips {
+        font-size: 0.24rem;
+        color: #999;
+    }
+}
+
+.page-temp-result {
+    padding: 1.54rem 0.4rem 0;
+
+    .pay-result-card {
+        height: 6.14rem;
+        text-align: center;
+
+        .pay-result-face {
+            width: 4.87rem;
+            height: 2.71rem;
+            margin: auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &>div {
+            &:nth-child(2) {
+                margin-top: 0.3rem;
+                color: #303030;
+                font-size: 0.38rem;
+                font-weight: 600;
+            }
+
+            &:nth-child(3) {
+                color: #999;
+                font-size: 0.28rem;
+            }
+
+            &.pay-result-btn {
+                margin: 0.6rem 0.68rem 0;
+                height: 1rem;
+            }
+        }
+    }
+}
+
+.page-home {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #f8f8f8;
+    overflow: hidden;
+
+    .home-tab {
+        height: 0.88rem;
+    }
+
+    .tab-content {
+        height: 100%;
+        padding-bottom: 1rem;
+        overflow: auto;
+        padding-top: 0.3rem;
+        padding-bottom: 0;
+        background: url(https://cdn-1256130579.cos.ap-shanghai.myqcloud.com/images/20190316/car_bg_logo1@2x.png) center bottom no-repeat/contain;
+    }
+
+    .no-authorize {
+        flex: 1;
+
+        .usercenter-authorize {
+            padding: 0.46rem 0.4rem 0.6rem;
+
+            .author-card {
+                padding: 0 0.3rem;
+                box-shadow: 0 0.05rem 0.1rem #eee;
+                height: 5.9rem;
+
+                .author-card-title {
+                    padding-top: 0.8rem;
+                    font-size: 0.28rem;
+                    color: #999;
+                    font-weight: 500;
+                    line-height: 0.4rem;
+                }
+
+                .author-card-mobile {
+                    position: relative;
+                    margin-top: 0.2rem;
+
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -0.14rem;
+                        width: 0.19rem;
+                        height: 0.28rem;
+                    }
+
+                    .weui-cell {
+                        padding: 0;
+                        height: 1rem;
+                        line-height: 1rem;
+
+                        &::before {
+                            border: 0;
+                            left: 0;
+                        }
+
+                        .border-1px(#ddd, bottom);
+
+                        .weui-input {
+                            padding-left: 0.5rem;
+                        }
+                    }
+                }
+
+                .author-card-checkcode {
+                    position: relative;
+
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -0.14rem;
+                        width: 0.19rem;
+                        height: 0.28rem;
+                    }
+
+                    .weui-cell {
+                        padding: 0 2.2rem 0 0;
+                        height: 1rem;
+                        line-height: 1rem;
+
+                        &::before {
+                            border: 0;
+                            left: 0;
+                        }
+
+                        .border-1px(#ddd, bottom);
+
+                        .weui-input {
+                            padding-left: 0.5rem;
+                        }
+                    }
+
+                    .weui-btn {
+                        position: absolute;
+                        right: 0;
+                        top: 0.25rem;
+                        max-width: 1.97rem;
+                        height: 0.5rem;
+                        line-height: 0.5rem;
+                        font-size: 0.24rem;
+                        border-radius: 0.3rem;
+                        background: #fff;
+                        letter-spacing: 0;
+                        padding: 0;
+
+                        &.gray {
+                            border: 1px solid #ccc;
+                            color: #ccc;
+                        }
+
+                        &.green {
+                            border: 1px solid #47B363;
+                            color: #47B363;
+
+                        }
+                    }
+                }
+
+                .error-msg {
+                    margin-top: 0.6rem;
+                    height: 0.3rem;
+                    line-height: 0.3rem;
+                    font-size: 0.24rem;
+                    text-align: center;
+                    color: red;
+                }
+
+                .submit {
+                    margin-top: 0.2rem;
+                    background: #4BCC83;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.page-mine {
+    .card {
+        margin: 0.5rem 0.4rem 0;
+        background: #fff;
+
+        &.mine-info {
+            margin-bottom: 0.5rem;
+            padding: 0.32rem 0.31rem;
+            display: flex;
+            flex-direction: column;
+
+            .mine-info-top {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 0.5rem;
+
+                .border-1px(#ccc, bottom);
+
+                &>div {
+                    &:nth-child(1) {
+                        display: flex;
+                        flex-direction: column;
+
+                        &>div {
+                            &:nth-child(1) {
+                                font-size: 0.42rem;
+                                font-weight: 600;
+                                color: #464646;
+                                letter-spacing: 2px;
+                            }
+
+                            &:last-child {
+                                margin-top: 0.05rem;
+                                background: url(https://cdn-1256130579.cos.ap-shanghai.myqcloud.com/images20190312/icon_vip.svg) left center no-repeat;
+                                background-size: 0.27rem 0.27rem;
+                                padding-left: 0.4rem;
+                                font-size: 0.24rem;
+                                color: #000;
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 1rem;
+                        height: 1rem;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+
+            .mine-info-bottom {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-top: 0.3rem;
+
+                &>div {
+                    &:first-child {
+                        font-size: 0.28rem;
+                        color: #464646;
+                    }
+
+                    &:last-child {
+                        font-size: 0.24rem;
+                        color: rgba(0, 0, 0, 0.3);
+                    }
+                }
+            }
+        }
+
+        &.mine-card {
+            padding: 0.3rem;
+
+            .mine-card-title {
+                font-size: 0.32rem;
+                font-weight: 600;
+                color: #464646;
+                padding-bottom: 0.08rem;
+            }
+
+            .mine-card-content {
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                align-items: center;
+
+                .mine-card-content-item {
+                    margin-top: 0.37rem;
+                    width: 25%;
+                    text-align: center;
+                    cursor: pointer;
+
+                    .mine-card-content-item-pic {
+                        position: relative;
+                        width: 0.64rem;
+                        height: 0.64rem;
+                        margin: 0 auto 0.08rem;
+
+                        &.border {
+                            border: 1px dashed #ddd;
+                        }
+
+                        &>img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mine-hr {
+        height: 1px;
+        margin: 0 0.4rem;
+
+        .border-1px(#ddd, bottom);
+    }
+}
+
+.page-month-fee {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 0 0.4rem 0.4rem;
+
+    .month-fee-card {
+        margin-top: 0.14rem;
+        padding: 0.3rem;
+        height: 2.38rem;
+        background: url(https://cdn-1256130579.cos.ap-shanghai.myqcloud.com/images/20190316/car_bg_parkingcard@2x.png) left center no-repeat;
+
+        &>div {
+            &:nth-child(1) {
+                font-size: 0.32rem;
+                font-weight: 500;
+                color: #fff;
+            }
+
+            &:nth-child(2) {
+                font-size: 0.24rem;
+                color: #fff;
+            }
+
+            &:nth-child(3) {
+                margin-top: 0.24rem;
+                color: #fff;
+                font-size: 0.6rem;
+
+                &>span {
+                    font-size: 0.24rem;
+                }
+
+                &>div {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .month-fee-ad {
+        margin-top: 0.61rem;
+        height: 1.39rem;
+        background: url(https://cdn-1256130579.cos.ap-shanghai.myqcloud.com/images20190312/home_ad01.png) left center no-repeat;
+        background-size: cover;
+    }
+
+    .month-fee-form {
+        .month-fee-form__remark {
+            color: rgba(48, 48, 48, 0.5)
+        }
+    }
+
+    .month-fee-btn {
+        margin-top: 0.8rem;
+    }
+}
+
+.page-plate-bind {
+    padding: 0 0.4rem;
+
+    .page-plate-bind-label {
+        margin-top: 0.6rem;
+        width: 100%;
+        height: 0.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &>div {
+            &:nth-child(2) {
+                width: 0.6rem;
+                height: 100%;
+                cursor: pointer;
+                text-align: center;
+                line-height: 0.6rem;
+                border: 1px dashed #ddd;
+                color: #f00;
+            }
+        }
+    }
+
+    .page-plate-bind-picker {
+        margin-top: 0.27rem;
+
+        .ui-plate-picker {
+            margin: 0;
+        }
+    }
+
+    .page-plate-bind-btn {
+        margin-top: 3.3rem;
+    }
+}
+
+.page-car-card-upload {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-bottom: 0.3rem;
+
+    .page-car-card-upload-title {
+        background: #4BCC83;
+        height: 0.68rem;
+        line-height: 0.68rem;
+        text-align: center;
+        font-size: 0.24rem;
+        color: #fff;
+    }
+
+    .page-car-card-upload-car {
+        margin: 0.3rem 0.4rem 0;
+        padding: 0.3rem 0.4rem 0.48rem 0.3rem;
+        display: flex;
+        justify-content: space-between;
+
+        &>div {
+            &>div {
+                &:nth-child(1) {
+                    font-size: 0.42rem;
+                    color: #303030;
+                    font-weight: 600;
+                }
+
+                &:nth-child(2) {
+                    font-size: 0.18rem;
+                    height: 0.3rem;
+                    display: flex;
+
+                    &>div {
+                        padding: 0 0.1rem;
+
+                        &:nth-child(1) {
+                            background: #666;
+                            color: #fff;
+                        }
+
+                        &:nth-child(2) {
+                            border: 1px solid #ddd;
+                            color: #666;
+                        }
+                    }
+                }
+            }
+        }
+
+        img {
+            width: 2.4rem;
+            height: 1rem;
+        }
+    }
+
+    .page-car-card-upload-card {
+        margin: 0.5rem 0.4rem 0;
+        padding: 0.3rem;
+
+        &>div {
+            &:nth-child(1) {
+                font-size: 0.28rem;
+                color: #303030;
+            }
+
+            &:nth-child(2) {
+                display: flex;
+                margin-top: 0.3rem;
+                justify-content: space-between;
+                text-align: center;
+
+                img {
+                    width: 1.31rem;
+                    height: 1rem;
+                }
+            }
+        }
+    }
+
+    .page-car-card-upload-desc {
+        font-size: 0.24rem;
+        color: #666;
+        margin-top: 0.6rem;
+        text-align: center;
+
+        &>span {
+            color: #47B363
+        }
+    }
+
+    .page-car-card-upload-wrapper {
+        margin: 0.28rem 0.4rem 0;
+        padding: 0.12rem 0;
+        border: 1px dashed #ddd;
+        text-align: center;
+
+        &.card2 {
+            margin-top: 0.5rem;
+        }
+
+        .page-car-card-upload-pic {
+            position: relative;
+            width: 3.82rem;
+            height: 2.47rem;
+            margin: auto;
+            border: 1px dashed #666;
+            cursor: pointer;
+
+            &>input {
+                border: 0;
+                background: transparent;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 15;
+                text-indent: -9999px;
+                left: 0;
+                top: 0;
+                display: block;
+                overflow: hidden;
+                opacity: 0;
+                cursor: pointer;
+            }
+
+            .page-car-card-upload-qrcode {
+                position: absolute;
+                left: 50%;
+                top: 0.37rem;
+                transform: translate(-50%);
+                width: 1.96rem;
+                height: 1.72rem;
+
+                &>img {
+                    width: 1.13rem;
+                    height: 1.13rem;
+                    margin: auto;
+                    border: 1px dashed #333;
+                }
+
+                &>div {
+                    margin-top: 0.19rem;
+                    font-size: 0.28rem;
+                    color: #666;
+                }
+            }
+
+            &>img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .page-car-card-upload-msg {
+        margin-top: 0.2rem;
+        font-size: 0.2rem;
+        color: #C0BFBF;
+        text-align: center;
+    }
+
+    .page-car-card-upload-btn {
+        margin: 0.6rem 0.4rem 0;
+
+        .weui-btn_default {
+            color: #fff;
+            background: #4BCC83;
+        }
+    }
+
+    .page-car-card-upload-tips {
+        margin-top: 0.32rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 0.28rem;
+        font-size: 0.2rem;
+
+        &>div {
+            &:nth-child(2) {
+                padding-left: 0.1rem;
+
+                a {
+                    text-decoration: underline;
+                    color: #5DB4ED;
+                }
+            }
+        }
+
+        img {
+            width: 0.24rem;
+            height: 0.24rem;
+        }
+    }
+
+    .page-car-card-form {
+        margin-top: 0.4rem;
+        padding: 0 0.4rem 0.2rem;
+        background: #fff;
+    }
+}
+
+.ui-stations {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+
+    &-input-close {
+        width: 0.6rem;
+        height: 0.6rem;
+        padding: 0.1rem;
+        margin-right: 0.1rem;
+
+        &>i {
+            border-radius: 0.2rem;
+            background: #eee;
+            width: 0.4rem;
+            height: 0.4rem;
+            line-height: 0.4rem;
+            text-align: center;
+        }
+    }
+
+    .ui-stations-search {
+        background: #4BCC83;
+        height: 1rem;
+
+        .vux-x-input {
+            position: relative;
+            background: #fff;
+            padding: 0 !important;
+            width: auto !important;
+            height: 0.6rem;
+            margin: 0.2rem 0.4rem;
+            border-radius: 0.5rem;
+            padding-left: 0.6rem !important;
+
+            &::before {
+                position: absolute;
+                left: 0.1rem;
+                top: 0.1rem;
+                width: 0.4rem;
+                height: 0.4rem;
+                content: '' !important;
+                background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTUxNjYyNzEwODgwIiBjbGFzcz0iaWNvbiIgc3R5bGU9IiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjE0MjkiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNDgiIGhlaWdodD0iNDgiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTk2Ni40IDkyNC44bC0yMzAuNC0yMjcuMmM2MC44LTY3LjIgOTYtMTU2LjggOTYtMjU2IDAtMjE3LjYtMTc2LTM5MC40LTM5MC40LTM5MC40LTIxNy42IDAtMzkwLjQgMTc2LTM5MC40IDM5MC40IDAgMjE3LjYgMTc2IDM5MC40IDM5MC40IDM5MC40IDk5LjIgMCAxODguOC0zNS4yIDI1Ni05NmwyMzAuNCAyMjcuMmM5LjYgOS42IDI4LjggOS42IDM4LjQgMEM5NzkuMiA5NTAuNCA5NzkuMiA5MzQuNCA5NjYuNCA5MjQuOHpNMTAyLjQgNDQxLjZjMC0xODUuNiAxNTAuNC0zMzkuMiAzMzkuMi0zMzkuMnMzMzkuMiAxNTAuNCAzMzkuMiAzMzkuMmMwIDg5LjYtMzUuMiAxNzIuOC05Mi44IDIzMy42LTMuMiAwLTMuMiAzLjItNi40IDMuMi0zLjIgMy4yLTMuMiAzLjItMy4yIDYuNC02MC44IDU3LjYtMTQ0IDkyLjgtMjMzLjYgOTIuOEMyNTYgNzgwLjggMTAyLjQgNjI3LjIgMTAyLjQgNDQxLjZ6IiBwLWlkPSIxNDMwIiBmaWxsPSIjNjY2NjY2Ij48L3BhdGg+PC9zdmc+');
+                transform: none;
+                background-size: contain;
+                display: block !important;
+                border: 0;
+            }
+        }
+
+
+    }
+
+    .ui-stations-scroll {
+        position: relative;
+        flex: 1;
+
+        .vux-no-group-title {
+            margin: 0 0.4rem;
+        }
+
+        .weui-cells_radio {
+            .weui-cell__ft {
+                width: 0.48rem;
+                height: 0.48rem;
+                border: 1px solid #ddd;
+                border-radius: 0.48rem;
+                padding-left: 0;
+            }
+
+            .weui-cell {
+                padding: 0.2rem 0 !important;
+                font-size: 0.28rem;
+                font-weight: 600;
+                height: 1rem;
+
+                &::before {
+                    left: 0 !important;
+                }
+            }
+        }
+
+        .ui-nostations {
+            text-align: center;
+            margin-top: 0.1rem;
+        }
+    }
+
+    .ui-stations-buildings-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        .vux-no-group-title {
+            margin-top: 0;
+        }
+
+        .weui-cells_radio {
+            .weui-cell__ft {
+                width: 0.48rem;
+                height: 0.48rem;
+                border: 1px solid #ddd;
+                border-radius: 0.48rem;
+                padding-left: 0;
+            }
+
+            .weui-cell {
+                padding: 0.2rem 0 !important;
+                font-size: 0.28rem;
+                font-weight: 600;
+                height: 1rem;
+
+                &::before {
+                    left: 0 !important;
+                }
+            }
+        }
+
+        .ui-stations-links {
+            display: flex;
+            background: url(https://cdn-1256130579.cos.ap-shanghai.myqcloud.com/images/20190321/icon_home.svg) left center no-repeat;
+            background-size: 0.3rem 0.3rem;
+            width: 100%;
+            height: 1rem;
+            line-height: 1rem;
+            margin: 0 0.4rem;
+            padding-left: 0.32rem;
+            font-size: 0.28rem;
+            color: #47B363;
+        }
+
+        .ui-stations-buildings {
+            padding: 0 0.4rem;
+            flex: 1;
+            overflow: auto;
+        }
+    }
+
+    .ui-stations-btn__addbuilding {
+        height: 1rem;
+        line-height: 1rem;
+        text-align: center;
+        background: #4BCC83;
+        color: #fff;
+        font-size: 0.36rem;
+        cursor: pointer;
+    }
+
+    &-form {
+        padding: 0 0.4rem;
+
+        &-btn {
+            margin-top: 0.82rem;
+        }
+    }
+}
+
+.page-car-info {
+    height: 100%;
+
+    .car-info-car {
+        width: 100%;
+        height: 3.77rem;
+        position: relative;
+        background: url(../images/car_bg.png) center top no-repeat;
+        background-size: cover;
+
+        &__unbind {
+            position: absolute;
+            right: 0.4rem;
+            top: 0.3rem;
+            width: 1.4rem;
+            height: 0.5rem;
+            color: #f7f7f7;
+            text-align: center;
+            border: 1px solid #f7f7f7;
+            border-radius: 0.15rem;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        img {
+            max-width: 4rem;
+            max-height: 1.7rem;
+            margin: auto;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -0.6rem;
+            bottom: 0;
+        }
+    }
+
+    .car-info-content-wrapper {
+        position: relative;
+        margin-top: -0.9rem;
+        padding: 0 0.4rem 0.4rem;
+        height: 100%;
+        background: url(https://cdn-1256130579.cos.ap-shanghai.myqcloud.com/images/20190316/car_bg_logo1.svg) 150% top no-repeat;
+        background-size: 80%;
+
+        .car-info-card {
+            height: 3.2rem;
+            padding: 0.3rem;
+
+            &>div {
+                &:nth-child(1) {
+                    font-size: 0.42rem;
+                    color: #303030;
+                    font-weight: 600;
+                }
+
+                &:nth-child(2) {
+                    font-size: 0.18rem;
+                    height: 0.3rem;
+                    line-height: 0.3rem;
+
+                    &>span {
+                        padding: 0 0.1rem;
+
+                        &:nth-child(1) {
+                            background: #666;
+                            color: #fff;
+                            border: 1px solid #666;
+                        }
+
+                        &:nth-child(2) {
+                            border: 1px solid #666;
+                        }
+                    }
+                }
+            }
+
+            .car-info-btn {
+                margin-top: 0.3rem;
+                padding-top: 0.18rem;
+                display: flex;
+                align-items: center;
+                height: 1.2rem;
+                .border-1px(#ccc, top);
+
+                &>img {
+                    width: 4.76rem;
+                    height: 1.2rem;
+                    cursor: pointer;
+                }
+
+                &>div {
+                    margin-left: 0.13rem;
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    border: 1px solid #ddd;
+                    border-radius: 0.15rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 0.2rem;
+                    cursor: pointer;
+
+                    &>img {
+                        width: 0.49rem;
+                        height: 0.49rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-ticket-config {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    background: #f8f8f8;
+
+    .ticket-config-header {
+        height: 1rem;
+        line-height: 1rem;
+        background: #4BCC83;
+        text-align: center;
+        color: #fff;
+        font-size: 0.32rem;
+        font-weight: 600;
+    }
+
+    .ticket-config-content {
+        flex: 1;
+        overflow: auto;
+
+        .ticket-config-content-top {
+            .border-1px(#d9d9d9, bottom);
+        }
+
+        .ticket-config-content-bottom {
+            margin: 0.2rem 0;
+            .border-1px(#d9d9d9, bottom);
+            background: #fff;
+            .border-1px(#d9d9d9, top);
+
+            .vux-x-switch {
+                background: #fff;
+                padding: 0.25rem 0.2rem;
+            }
+        }
+
+        .ticket-config-money-pool {
+            background: #fff;
+            .border-1px(#d9d9d9, top);
+            padding: 0 0.2rem;
+        }
+
+        .vux-x-input {
+            background: #fff;
+            padding: 0.25rem 0.2rem;
+
+            .ticket-config-keyword-add {
+                .border-1px(#ddd);
+                padding: 0 0.1rem;
+                cursor: pointer;
+            }
+
+            img {
+                width: 0.3rem;
+                height: 0.3rem;
+                cursor: pointer;
+            }
+        }
+
+        .ticket-config-other {
+            margin-top: 0.2rem;
+            background: #fff;
+            .border-1px(#d9d9d9, top);
+
+            .ticket-config-other-title {
+                padding: 0.2rem;
+                font-size: 0.3rem;
+                font-weight: 600;
+                .border-1px(#4BCC83, bottom);
+            }
+
+            .ticket-config-other-item {
+                .border-1px(#d9d9d9, bottom);
+                padding: 0 0.2rem;
+
+                img {
+                    width: 0.4rem;
+                    height: 0.4rem;
+                    cursor: pointer;
+                }
+            }
+
+            .ticket-config-condition {
+                font-size: 0.3rem;
+                font-weight: 600;
+                padding: 0 0.2rem;
+                .border-1px(#4BCC83, bottom);
+
+                .ticket-config-condition-add {
+                    .border-1px(#ddd);
+                    padding: 0 0.1rem;
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+
+    .ticket-config-footer {
+        height: 1rem;
+        line-height: 1rem;
+        background: #4BCC83;
+        color: #fff;
+        font-size: 0.32rem;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 4px;
+        border-radius: 0.15rem;
+        cursor: pointer;
+    }
+}
+
+.page-ticket-scan {
+    font-size: 0.3rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .ticket-tip {
+        text-align: center;
+        margin: 0.6rem auto 0.4rem;
+        color: #666;
+    }
+
+    .ticket-uploader {
+        position: relative;
+        text-align: center;
+        height: 1rem;
+        line-height: 1rem;
+        overflow: hidden;
+        margin: 0 0.4rem 0.4rem;
+    }
+
+    .ticket-uploader {
+        .ticket-uploader-btn {
+            height: 1rem;
+            background: #4BCC83;
+            font-size: 0.4rem;
+            color: #fff;
+            border-radius: 0.15rem;
+        }
+
+        .ticket-uploader-btn>i {
+            padding-right: 0.2rem;
+        }
+    }
+
+    input[type="file"] {
+        color: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 7rem;
+        height: 1.5rem;
+        text-indent: -99999px;
+    }
+
+    .ticket-img-container {
+        margin: 0 0.2rem;
+        flex: 1;
+        text-align: center;
+        position: relative;
+        background: url(https://cdn-1256130579.cos.ap-shanghai.myqcloud.com/images/20190316/car_bg_logo1@2x.png) center center no-repeat;
+        background-size: contain;
+
+        img {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 6rem;
+            max-height: 6rem;
+        }
+    }
+
+    .ticket-img-scanner {
+        width: 6rem;
+        height: 6rem;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        border: 1px solid #ddd;
+        transform: translate(-50%, -50%);
+        background: rgba(254, 254, 254, 0.1);
+        overflow: hidden;
+    }
+
+    .img-scanner-left-top {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1rem;
+        height: 1rem;
+        border-top: 2px solid #44bc0c;
+        border-left: 2px solid #44bc0c;
+    }
+
+    .img-scanner-right-top {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1rem;
+        height: 1rem;
+        border-top: 2px solid #44bc0c;
+        border-right: 2px solid #44bc0c;
+    }
+
+    .img-scanner-left-bottom {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 1rem;
+        height: 1rem;
+        border-bottom: 2px solid #44bc0c;
+        border-left: 2px solid #44bc0c;
+    }
+
+    .img-scanner-right-bottom {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 1rem;
+        height: 1rem;
+        border-right: 2px solid #44bc0c;
+        border-bottom: 2px solid #44bc0c;
+    }
+
+    .img-scanner-tip {
+        margin-top: 1rem;
+        color: #666;
+    }
+
+    .img-scanner-line {
+        width: 5.6rem;
+        height: 1px;
+        background: #0f0;
+        position: absolute;
+        text-align: center;
+        z-index: 3;
+        left: 0.2rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 10px #8ba28b;
+        animation: myScanner 2s ease-in-out infinite;
+    }
+
+    .ticket-station-picker {
+        width: 100%;
+    }
+
+    .ticket-scanner-result {
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-scanner-retry {
+        position: absolute;
+        left: 50%;
+        bottom: 1rem;
+        width: 5rem;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        color: #144e06;
+        border: 1px solid #144e06;
+        border-radius: 0.4rem;
+        background: transparent;
+        transform: translateX(-50%);
+    }
+
+    .img-scanner-cancel {
+        position: absolute;
+        right: 0.4rem;
+        bottom: 0.4rem;
+        width: 1.6rem;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        color: #a8311c;
+        border: 1px solid #a8311c;
+        border-radius: 0.4rem;
+        background: transparent;
+    }
+
+}
+
+.page-scan-result {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    .scan-result-list {
+        width: 100%;
+        flex: 1;
+        overflow: auto;
+        padding-bottom: 0.2rem;
+
+        .scan-result-item {
+            margin: 0.2rem 0.4rem 0;
+            padding: 0.2rem;
+            border: 2px dashed #f7f7f7;
+            background: url(https://cdn-1256130579.cos.ap-shanghai.myqcloud.com/images/popup_coupon_bg@2x.png) left bottom no-repeat;
+            cursor: pointer;
+
+            &.active {
+                border: 2px dashed #02ab4f;
+            }
+
+            &>div {
+                &>div.tc {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &>div {
+                        font-size: 0.32rem;
+                        line-height: 2;
+
+                        &:nth-child(1) {
+                            width: 2rem;
+                        }
+
+                        &:nth-child(2) {
+                            flex: 1;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+
+            &>div.tc-border {
+                border-left: 4px solid #02ab4f;
+                margin-top: 0.1rem;
+                padding-left: 0.1rem;
+                font-size: 0.32rem;
+                font-weight: 600;
+            }
+
+            &>div.tc-list {
+                &>div {
+                    font-size: 0.32rem;
+                    line-height: 2;
+                    padding: 0.1rem 0;
+                    .border-1px(#ddd, bottom);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    &>div.tc-item-flg {
+                        width: 0.52rem;
+                        height: 0.52rem;
+                        border-radius: 0.52rem;
+                        .border-1px(#666, all, 0.52rem);
+                        padding: 0.1rem;
+
+                        &.active {
+                            span {
+                                background-color: #0cda95;
+                                background-position: center center;
+                                background-size: 50% 50%;
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 50%;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .scan-result-footer {
+        width: 100%;
+        height: 3rem;
+        padding: 0.2rem 0.4rem;
+        background: #fff;
+
+        .scan-result-btn {
+            width: 100%;
+            height: 1rem;
+            margin-top: 0.4rem;
+            background: #4BCC83;
+            text-align: center;
+            color: #fff;
+            line-height: 1rem;
+            font-size: 0.32rem;
+            font-weight: 600;
+            letter-spacing: 4px;
+            border-radius: 0.15rem;
+            cursor: pointer;
+        }
+    }
+}
+
+@keyframes myScanner {
+    from {
+        top: -0.1rem;
+    }
+
+    to {
+        top: 6.1rem;
+    }
+}
+
+.page-login {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #f8f8f8;
+    overflow: hidden;
+
+    .no-authorize {
+        flex: 1;
+
+        .usercenter-authorize {
+            padding: 0.46rem 0.4rem 0.6rem;
+
+            .author-card {
+                padding: 0 0.3rem;
+                box-shadow: 0 0.05rem 0.1rem #eee;
+                height: 5.9rem;
+
+                .author-card-title {
+                    padding-top: 0.8rem;
+                    font-size: 0.28rem;
+                    color: #999;
+                    font-weight: 500;
+                    line-height: 0.4rem;
+                }
+
+                .author-card-mobile {
+                    position: relative;
+                    margin-top: 0.2rem;
+
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -0.14rem;
+                        width: 0.19rem;
+                        height: 0.28rem;
+                    }
+
+                    .weui-cell {
+                        padding: 0;
+                        height: 1rem;
+                        line-height: 1rem;
+
+                        &::before {
+                            border: 0;
+                            left: 0;
+                        }
+
+                        .border-1px(#ddd, bottom);
+
+                        .weui-input {
+                            padding-left: 0.5rem;
+                        }
+                    }
+                }
+
+                .author-card-checkcode {
+                    position: relative;
+
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -0.14rem;
+                        width: 0.19rem;
+                        height: 0.28rem;
+                    }
+
+                    .weui-cell {
+                        padding: 0 2.2rem 0 0;
+                        height: 1rem;
+                        line-height: 1rem;
+
+                        &::before {
+                            border: 0;
+                            left: 0;
+                        }
+
+                        .border-1px(#ddd, bottom);
+
+                        .weui-input {
+                            padding-left: 0.5rem;
+                        }
+                    }
+
+                    .weui-btn {
+                        position: absolute;
+                        right: 0;
+                        top: 0.25rem;
+                        max-width: 1.97rem;
+                        height: 0.5rem;
+                        line-height: 0.5rem;
+                        font-size: 0.24rem;
+                        border-radius: 0.3rem;
+                        background: #fff;
+                        letter-spacing: 0;
+                        padding: 0;
+
+                        &.gray {
+                            border: 1px solid #ccc;
+                            color: #ccc;
+                        }
+
+                        &.green {
+                            border: 1px solid #47B363;
+                            color: #47B363;
+
+                        }
+                    }
+                }
+
+                .error-msg {
+                    margin-top: 0.6rem;
+                    height: 0.3rem;
+                    line-height: 0.3rem;
+                    font-size: 0.24rem;
+                    text-align: center;
+                    color: red;
+                }
+
+                .submit {
+                    margin-top: 0.2rem;
+                    background: #4BCC83;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.page-no-plate {
+    padding: 1rem 0.4rem;
+
+    &-card {
+        padding: 0.3rem;
+        min-height: 3rem;
+
+        .header {
+            padding-bottom: 0.4rem;
+            .border-1px(#ddd, bottom);
+
+            .theme {
+                display: flex;
+                height: 1rem;
+                align-items: center;
+                flex-direction: row;
+                justify-content: space-between;
+
+                &-left {
+                    font-size: 0.42rem;
+                    font-weight: 600;
+                }
+
+                &-right {
+                    width: 0.6rem;
+                    height: 0.6rem;
+                    background: #47B363;
+                    color: #fff;
+                    text-align: center;
+                    line-height: 0.6rem;
+                    border-radius: 0.3rem;
+                }
+            }
+        }
+    }
+
+    &-welcome {
+        text-align: center;
+        height: 1rem;
+        line-height: 1rem;
+        margin: 0.5rem auto;
+        font-size: 0.4rem;
+        color: #4BCC83;
+    }
+
+    &-tips {
+        margin-top: 0.2rem;
+        font-size: 0.24rem;
+        color: #f1980a;
+    }
+}
+
+/* 紧急开闸  */
+.page-emergency-open {
+    width: 100%;
+    height: 100%;
+    background: url(https://cdn-1256130579.cos.ap-shanghai.myqcloud.com/images/20190316/car_bg_logo1@2x.png) center bottom no-repeat/contain;
+
+    &-card {
+        margin: 0.3rem 0.4rem;
+        padding: 0.3rem;
+    }
+
+    &-code {
+        margin-top: 0.3rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        &>.emergency-input {
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            .border-1px(#ddd);
+
+            &>input {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                font-size: 0.48rem;
+            }
+        }
+    }
+
+    &-btn {
+        margin-top: 0.3rem;
+    }
+
+    &-time {
+        padding: 0.4rem 0;
+
+        &-title {
+            font-weight: 700;
+            padding: 0.2rem 0;
+        }
+    }
+}

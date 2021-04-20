@@ -1,0 +1,101 @@
+.ui-letter-selector {
+    font-weight: 300!important;
+}
+ ::-webkit-scrollbar {
+    display: none;
+}
+.slide-enter, .slide-leave-active{
+    transform: translateX(100%)!important;
+}
+.ui-letter-selector {
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 10000;
+    font-size: 0.28rem;
+    color: #303030;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    .content {
+        width: 100%;
+        height: auto;
+        background: #fff;
+        border-radius: 0.03rem;
+        .inner {
+            dl {
+                position: relative;
+                dt {
+                    height: 0.7rem;
+                    line-height: 0.7rem;
+                    background: rgba(248, 248, 248, 1);
+                    color: rgba(153, 153, 153, 1);
+                    padding: 0 0.45rem;
+                    em {
+                        position: relative;
+                        top: 0.01rem;
+                        margin-right: 0.06rem;
+                    }
+                }
+                dd {
+                    display: flex;
+                    align-items: center;
+                    padding: 0 0.45rem;
+                    height: 1rem;
+                    line-height: 1rem;
+                    font-weight: bold;
+                    position: relative; // 下边框
+                    &.bdb:after {
+                        content: '';
+                        opacity: 0.5;
+                        height: 1px;
+                        left: 0.45rem;
+                        right: 0.45rem;
+                        bottom: 0;
+                        background-size: 100% 100%;
+                        position: absolute;
+                        background-color: rgba(204, 204, 204, 1);
+                    }
+                    &.bdb:last-child:after {
+                        background-color: transparent;
+                    }
+                    img {
+                        display: inline-block;
+                        width: 0.6rem;
+                        height: 0.6rem;
+                        margin-right: 0.2rem;
+                    }
+                }
+            }
+            .letter-nav {
+                position: fixed;
+                right: 0.1rem;
+                top: 1rem;
+                z-index: 10002;
+                display: flex;
+                color: #47B363;
+                border-radius: 0.2rem;
+                background-color: rgba(241, 241, 241, 1);
+                text-align: center;
+                section {
+                    flex: 1;
+                }
+                ol {
+                    width: 0.4rem;
+                    text-align: right;
+                    padding-top: 0.13rem;
+                    li {
+                        margin-bottom: 0.13rem;
+                        line-height: 100%;
+                        box-sizing: border-box;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

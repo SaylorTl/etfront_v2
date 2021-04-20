@@ -1,0 +1,44 @@
+.ui-scroll-wrapper {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .ui-pulldown-wrapper {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all;
+    .after-trigger {
+      margin-top: 5px;
+    }
+  }
+  
+  .ui-pullup-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .before-trigger {
+      padding: 22px 0;
+      min-height: 1em;
+    }
+    .after-trigger {
+      // padding: 19px 0;
+    }
+  }
+  
+  .ui-scroll-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .ui-scroll-item {
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    padding-left: 20px;
+  }

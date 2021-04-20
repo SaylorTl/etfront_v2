@@ -1,0 +1,77 @@
+.ui-card-warpper {
+	margin: 0 auto 0.1rem;
+    &.card {
+        padding: 0.3rem 0.3rem;
+    }
+	.ui-card {
+		// width: 6.7rem;
+		// height: 1.34rem;
+		background: #ffffff;
+		.ui-card-in-img {
+			display: block;
+			width: 0.62rem;
+			height: 0.62rem;
+    	margin-right: 0.2rem;
+			font-size: 0.20rem;
+			color: #ffffff;
+		}
+		.ui-card-content {
+			color: #303030;
+			.ui-card-content-dec {
+				font-size: 0.24rem;
+				color: #999999;
+			}
+			.fail {
+				color: #FF6464;
+			}
+		}
+	}
+	.temp-btn {
+		.ui-card-border {
+			position: relative;
+			padding: 0.25rem 0;
+			&::before {
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0.15rem;
+				margin: auto; 
+				width: 100%;
+				border-top: 1px dotted rgba(#000000, 0.2);
+				content: ' ';
+			}
+		}
+		.btn {
+			display: block;
+			width: 100%;
+			height: 0.8rem;
+			background-color: #4BCC83;
+			color: #fff;
+			font-size: 0.32rem;
+			text-align: center;
+			border-radius: 0.16rem;
+			outline: transparent;
+		}
+		.btn_disabled {
+			background-color: #ccc;
+		}
+		.btn_primary {
+			background-color: #4BCC83;
+		}
+	}
+	.ui-msg-sys {
+		position: relative;
+		.ui-card-content-dec {
+			font-size: 0.24rem;
+			color: #999999;
+		}
+		.ui-icon {
+			width: 0.12rem;
+			height: 0.22rem;
+			display: block;
+			position: absolute;
+			bottom: 0.04rem;
+			right: 0;
+		}
+	}
+}
